@@ -8,19 +8,21 @@ void write_centrality_calibration_xml() {
 
   PHParameters* param = new PHParameters("centrality");
 
-  param->set_string_param("description","Centrality calibration from MDC-1, MBD and sEPD, based on Sum G4Hits");
+  param->set_string_param("description","Centrality calibration from MDC-2, March 2023 workfest");
 
   std::string line;
   std::ifstream myfile ("centrality_input_simple.txt");
   if (myfile.is_open())
     {
+      int cent;
 
-      // sEPD
-      int cent = 0;
+      // sEPD Reconstructed tiles
+      cent = 0;
+      getline (myfile,line); // dummy line for human readibility
       for (int n = 0; n < 11; n++) {
 	getline (myfile,line);
 	float centile_value = atof(line.c_str());
-	std::cout << " sEPD, centile " << cent * 10 << ", value = " << centile_value << std::endl;
+	std::cout << " sEPD Tiles, centile " << cent << ", value = " << centile_value << std::endl;
 
 	std::ostringstream s;
 	s << "epd_centile_" << cent;
@@ -29,15 +31,46 @@ void write_centrality_calibration_xml() {
 	cent += 10;
       }
 
-      // MBD
+      // MVTX cluster multiplicity
       cent = 0;
+      getline (myfile,line); // dummy line for human readibility
       for (int n = 0; n < 11; n++) {
 	getline (myfile,line);
 	float centile_value = atof(line.c_str());
-	std::cout << " MBD, centile " << cent * 10 << ", value = " << centile_value << std::endl;
+	std::cout << " MVTX N_cluster, centile " << cent << ", value = " << centile_value << std::endl;
 
 	std::ostringstream s;
-	s << "mbd_centile_" << cent;
+	s << "mvtx_centile_" << cent;
+	param->set_double_param( s.str().c_str() , centile_value );
+
+	cent += 10;
+      }
+
+      // sEPD G4Hit Sum (legacy)
+      cent = 0;
+      getline (myfile,line); // dummy line for human readibility
+      for (int n = 0; n < 11; n++) {
+	getline (myfile,line);
+	float centile_value = atof(line.c_str());
+	std::cout << " sEPD G4Hit Sum (legacy), centile " << cent << ", value = " << centile_value << std::endl;
+
+	std::ostringstream s;
+	s << "epd_g4hit_centile_" << cent;
+	param->set_double_param( s.str().c_str() , centile_value );
+
+	cent += 10;
+      }
+
+      // MBD G4Hit Sum (legacy) 
+      cent = 0;
+      getline (myfile,line); // dummy line for human readibility
+      for (int n = 0; n < 11; n++) {
+	getline (myfile,line);
+	float centile_value = atof(line.c_str());
+	std::cout << " MBD G4Hit Sum (legacy), centile " << cent << ", value = " << centile_value << std::endl;
+
+	std::ostringstream s;
+	s << "mbd_g4hit_centile_" << cent;
 	param->set_double_param( s.str().c_str() , centile_value );
 
 	cent += 10;
@@ -45,10 +78,11 @@ void write_centrality_calibration_xml() {
 
       // b (impact parameter)
       cent = 0;
+      getline (myfile,line); // dummy line for human readibility
       for (int n = 0; n < 11; n++) {
 	getline (myfile,line);
 	float centile_value = atof(line.c_str());
-	std::cout << " b, centile " << cent * 10 << ", value = " << centile_value << std::endl;
+	std::cout << " b, centile " << cent << ", value = " << centile_value << std::endl;
 
 	std::ostringstream s;
 	s << "bimp_centile_" << cent;

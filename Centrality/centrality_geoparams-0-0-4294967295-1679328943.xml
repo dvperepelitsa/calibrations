@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
-<root setup="2xoo" ref="null" created="2023-03-13 15:24:45" modified="2023-03-13 15:24:45" uuid="b67059e0-c1d4-11ed-b583-5330c782beef" version="3" file_version="62606">
-  <XmlKey name="PdbParameterMap" cycle="1" created="2023-03-13 15:24:45">
+<root setup="2xoo" ref="null" created="2023-03-20 12:15:44" modified="2023-03-20 12:15:44" uuid="77672bdc-c73a-11ed-826d-5330c782beef" version="3" file_version="62606">
+  <XmlKey name="PdbParameterMap" cycle="1" created="2023-03-20 12:15:44">
     <Object class="PdbParameterMap">
       <PdbParameterMap version="1">
         <PdbCalChan version="1">
@@ -10,7 +10,7 @@
         </PdbCalChan>
         <dparams>
           <Version v="9"/>
-          <Int_t v="33"/>
+          <Int_t v="55"/>
           <string v="bimp_centile_0"/>
           <Double_t v="0"/>
           <string v="bimp_centile_10"/>
@@ -34,49 +34,93 @@
           <string v="bimp_centile_90"/>
           <Double_t v="14.661100387573242"/>
           <string v="epd_centile_0"/>
-          <Double_t v="1000"/>
+          <Double_t v="100000"/>
           <string v="epd_centile_10"/>
-          <Double_t v="18.731399536132812"/>
+          <Double_t v="9126.98046875"/>
           <string v="epd_centile_100"/>
           <Double_t v="-1"/>
           <string v="epd_centile_20"/>
-          <Double_t v="12.976300239562988"/>
+          <Double_t v="6201.14013671875"/>
           <string v="epd_centile_30"/>
-          <Double_t v="8.7944498062133789"/>
+          <Double_t v="4251.39990234375"/>
           <string v="epd_centile_40"/>
-          <Double_t v="5.7473301887512207"/>
+          <Double_t v="2720.47998046875"/>
           <string v="epd_centile_50"/>
-          <Double_t v="3.4969899654388428"/>
+          <Double_t v="1674.9599609375"/>
           <string v="epd_centile_60"/>
-          <Double_t v="2.0113101005554199"/>
+          <Double_t v="983.43798828125"/>
           <string v="epd_centile_70"/>
-          <Double_t v="1.0483900308609009"/>
+          <Double_t v="497.58200073242188"/>
           <string v="epd_centile_80"/>
-          <Double_t v="0.49484500288963318"/>
+          <Double_t v="235.51499938964844"/>
           <string v="epd_centile_90"/>
-          <Double_t v="0.19694800674915314"/>
-          <string v="mbd_centile_0"/>
+          <Double_t v="93.822097778320312"/>
+          <string v="epd_g4hit_centile_0"/>
           <Double_t v="1000"/>
-          <string v="mbd_centile_10"/>
-          <Double_t v="14.471099853515625"/>
-          <string v="mbd_centile_100"/>
+          <string v="epd_g4hit_centile_10"/>
+          <Double_t v="18.731399536132812"/>
+          <string v="epd_g4hit_centile_100"/>
           <Double_t v="-1"/>
-          <string v="mbd_centile_20"/>
+          <string v="epd_g4hit_centile_20"/>
+          <Double_t v="12.976300239562988"/>
+          <string v="epd_g4hit_centile_30"/>
+          <Double_t v="8.7944498062133789"/>
+          <string v="epd_g4hit_centile_40"/>
+          <Double_t v="5.7473301887512207"/>
+          <string v="epd_g4hit_centile_50"/>
+          <Double_t v="3.4969899654388428"/>
+          <string v="epd_g4hit_centile_60"/>
+          <Double_t v="2.0113101005554199"/>
+          <string v="epd_g4hit_centile_70"/>
+          <Double_t v="1.0483900308609009"/>
+          <string v="epd_g4hit_centile_80"/>
+          <Double_t v="0.49484500288963318"/>
+          <string v="epd_g4hit_centile_90"/>
+          <Double_t v="0.19694800674915314"/>
+          <string v="mbd_g4hit_centile_0"/>
+          <Double_t v="1000"/>
+          <string v="mbd_g4hit_centile_10"/>
+          <Double_t v="14.471099853515625"/>
+          <string v="mbd_g4hit_centile_100"/>
+          <Double_t v="-1"/>
+          <string v="mbd_g4hit_centile_20"/>
           <Double_t v="10.178099632263184"/>
-          <string v="mbd_centile_30"/>
+          <string v="mbd_g4hit_centile_30"/>
           <Double_t v="6.9950399398803711"/>
-          <string v="mbd_centile_40"/>
+          <string v="mbd_g4hit_centile_40"/>
           <Double_t v="4.6266098022460938"/>
-          <string v="mbd_centile_50"/>
+          <string v="mbd_g4hit_centile_50"/>
           <Double_t v="2.8529999256134033"/>
-          <string v="mbd_centile_60"/>
+          <string v="mbd_g4hit_centile_60"/>
           <Double_t v="1.6512800455093384"/>
-          <string v="mbd_centile_70"/>
+          <string v="mbd_g4hit_centile_70"/>
           <Double_t v="0.86610502004623413"/>
-          <string v="mbd_centile_80"/>
+          <string v="mbd_g4hit_centile_80"/>
           <Double_t v="0.40094798803329468"/>
-          <string v="mbd_centile_90"/>
+          <string v="mbd_g4hit_centile_90"/>
           <Double_t v="0.14449700713157654"/>
+          <string v="mvtx_centile_0"/>
+          <Double_t v="100000"/>
+          <string v="mvtx_centile_10"/>
+          <Double_t v="7702.5"/>
+          <string v="mvtx_centile_100"/>
+          <Double_t v="-1"/>
+          <string v="mvtx_centile_20"/>
+          <Double_t v="4915"/>
+          <string v="mvtx_centile_30"/>
+          <Double_t v="3165"/>
+          <string v="mvtx_centile_40"/>
+          <Double_t v="1914.5"/>
+          <string v="mvtx_centile_50"/>
+          <Double_t v="1109"/>
+          <string v="mvtx_centile_60"/>
+          <Double_t v="617"/>
+          <string v="mvtx_centile_70"/>
+          <Double_t v="311"/>
+          <string v="mvtx_centile_80"/>
+          <Double_t v="139"/>
+          <string v="mvtx_centile_90"/>
+          <Double_t v="53"/>
         </dparams>
         <iparams>
           <Version v="9"/>
@@ -86,7 +130,7 @@
           <Version v="9"/>
           <Int_t v="1"/>
           <string v="description"/>
-          <string v="Centrality calibration from MDC-1, MBD and sEPD, based on Sum G4Hits"/>
+          <string v="Centrality calibration from MDC-2, March 2023 workfest"/>
         </cparams>
       </PdbParameterMap>
     </Object>
